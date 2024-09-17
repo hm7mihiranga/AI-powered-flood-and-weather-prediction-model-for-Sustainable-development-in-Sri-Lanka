@@ -5,7 +5,7 @@ In this we used to flood and weather detection using machine learning &amp; AI i
 The dataset used for this project was retrieved from https://www.kaggle.com/c/understanding_cloud_organization
 
 ## Introduction
-![Teaser Animation](src/Teaser_AnimationwLabels.gif)
+![Teaser Animation](Cloud_Pattern_Model/Teaser_AnimationwLabels.gif)
 
 Clouds are crucial in influencing weather patterns, and understanding their organization can help us predict rainfall. In this project, you aim to classify cloud formations from satellite images to predict whether it will rain or not. By identifying specific cloud types, such as those associated with rain, you can improve the accuracy of weather predictions.</br></br>
 
