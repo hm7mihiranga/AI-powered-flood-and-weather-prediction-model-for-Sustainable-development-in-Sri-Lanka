@@ -23,7 +23,7 @@ label_to_colormap = dict(zip(labels, colormaps))
 idx_to_colormap = dict(zip(indexes, colormaps))
 
 # Load your saved model
-model = load_model('cloud_segmentation_model.h5')
+model = load_model('cloud_segmentation_model.h5') # Model Link : https://drive.google.com/drive/folders/140FhfHNMYHgHPhKvp9RE5jMf9MFCPdFx?usp=sharing
 
 # Load and preprocess the input image
 def load_and_preprocess_image(image_path):
