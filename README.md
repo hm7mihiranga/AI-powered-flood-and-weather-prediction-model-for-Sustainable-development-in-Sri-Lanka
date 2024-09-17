@@ -15,4 +15,8 @@ The labeled images were created by a team of scientists through a collaborative 
 
 This project contributes to improving weather forecasting and helps scientists better understand the relationship between cloud organization and rainfall.</br></br>
 
+For this project, I’ll be utilizing cloud classification to predict rainy or not, and Kaggle’s GPU resources are particularly beneficial for training our model efficiently. The initial model has been trained for approximately  20 epochs, but for improved accuracy, it's recommended to train the model for 50 to 100 epochs, incorporating callback functions to optimize performance.
+
+Additionally, the preprocessing steps used have been effective in achieving baseline accuracy for our prototype. These steps ensure that the data is properly prepared, which is crucial for obtaining reliable results and improving the overall performance of the model.
+
 
