@@ -21,7 +21,7 @@ Data preprocessing is essential to ensure the dataset is clean and suitable for 
 
 Handling Missing Data: Any missing values will be identified and handled using imputation techniques (e.g., mean, median, or forward-fill methods).
 Feature Engineering: New features such as "1-hour before" and "1-hour after" water levels and rainfall will be created using shift-based transformations of the time-series data.
-Normalization/Scaling: Continuous variables, such as rainfall and water levels, will be scaled to ensure that models perform optimally during training.
+Normalization/Scaling: Continuous variables, such as rainfall and water levels, will be scaled to ensure that models perform optimally during training.<br></br>
 3. Exploratory Data Analysis (EDA)
 Exploratory Data Analysis (EDA) will be conducted to understand trends, correlations, and distribution patterns in the data. Visualization tools like histograms, line plots, and heatmaps will be used to detect seasonal variations, trends in water levels, and relationships between rainfall and flood risk. EDA will also highlight the stations most prone to flooding and the most critical thresholds for each station.
 
