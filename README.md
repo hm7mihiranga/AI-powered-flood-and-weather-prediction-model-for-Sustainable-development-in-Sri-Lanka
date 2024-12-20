@@ -29,7 +29,7 @@ The project involves using a dataset containing historical records of rainfall, 
 
 ## Methodology
 
-# Data Collection
+### Data Collection
 The dataset used for this project includes historical flood-related data collected from gauging stations across Sri Lanka. The data comprises several key features:
 
 Date and Time: Time-specific records of rainfall and water levels.
@@ -39,29 +39,97 @@ Flood Risk Status: Categorized as Normal, Alert, Minor Flood, or Major Flood bas
 Predefined Thresholds: These include the water level thresholds for each station (Alert, Minor Flood, and Major Flood).
 This dataset will be used to train the machine learning models to predict flood statuses and water levels.
 
-# Data Preprocessing
+### Data Preprocessing
 Data preprocessing is essential to ensure the dataset is clean and suitable for model training. The following steps will be taken:
 Handling Missing Data: Any missing values will be identified and handled using imputation techniques (e.g., mean, median, or forward-fill methods).
 Feature Engineering: New features such as "1-hour before" and "1-hour after" water levels and rainfall will be created using shift-based transformations of the time-series data.
 Normalization/Scaling: Continuous variables, such as rainfall and water levels, will be scaled to ensure that models perform optimally during training.
 
-# Exploratory Data Analysis (EDA)
+### Exploratory Data Analysis (EDA)
 Exploratory Data Analysis (EDA) will be conducted to understand trends, correlations, and distribution patterns in the data. Visualization tools like histograms, line plots, and heatmaps will be used to detect seasonal variations, trends in water levels, and relationships between rainfall and flood risk. EDA will also highlight the stations most prone to flooding and the most critical thresholds for each station.
 
-# Model Development
+### Model Development
 The project will involve developing machine learning models to predict water levels and flood statuses:
 Random Forest: A decision-tree-based ensemble method that will be used to predict water levels and flood risk statuses. Random Forest is robust to overfitting and performs well on time-series data with complex relationships between variables.
 Logistic Regression: This model will be used to classify the flood status (Normal, Alert, Minor Flood, Major Flood) based on features such as rainfall, water levels, and station location.
 Other Machine Learning Models: Additional models such as Support Vector Machines (SVM), Gradient Boosting, and Neural Networks will be explored for comparison purposes.
 
-# Model Training and Validation
+### Model Training and Validation
 The dataset will be split into training and test sets to evaluate model performance. Cross-validation will be used to assess the robustness of the models and prevent overfitting. Evaluation metrics such as accuracy, precision, recall, and F1-score will be used to measure the performance of the classification models. For water level prediction, metrics such as Mean Squared Error (MSE) and Mean Absolute Error (MAE) will be used.
 
-# Threshold Mapping and Prediction
+### Threshold Mapping and Prediction
 After model training, the predicted water levels will be compared against predefined thresholds for each gauging station to classify the flood risk status:
 Normal: Water level below alert threshold.
 Alert: Water level between alert and minor flood thresholds.
 Minor Flood: Water level between minor and major flood thresholds.
 Major Flood: Water level exceeds major flood threshold.
 These thresholds will be mapped to real-time data for continuous monitoring and early warning predictions.
+
+# WeatherZen
+
+WeatherZen is a Flutter application designed to provide real-time weather forecasts and flood alerts.
+
+## Features
+
+- **Real-time Weather Updates**: Get accurate and up-to-date weather information.
+- **Flood Alerts**: Stay informed about potential flood risks in your area.
+- **Cross-Platform Support**: Runs seamlessly on both Android and iOS devices.
+- **Firebase Integration**: Real-time data updates using Firebase Firestore.
+- **Image Prediction**: Leverages a Flask backend for advanced image prediction functionality.
+
+## Prerequisites
+
+- **Flutter SDK**: Ensure you have the Flutter SDK installed. [Flutter Installation Guide](https://flutter.dev/docs/get-started/install)
+- **IDE**: Use an IDE that supports Flutter development, such as:
+  - Android Studio
+  - Visual Studio Code
+  - IntelliJ IDEA
+  
+  Install the Flutter and Dart plugins for your chosen IDE.
+- **Git**: Install Git to clone repositories and manage version control.
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-link>
+   ```
+
+2. Install dependencies:
+   ```bash
+   flutter pub get
+   ```
+
+3. Configure Firebase:
+   - Create a Firebase project.
+   - Add your `google-services.json` (for Android) or `GoogleService-Info.plist` (for iOS) file to the appropriate location.
+   - Set up Firebase Firestore and initialize it in the `main.dart` file.
+
+4. Set up the Flask backend:
+   - Install the required Python packages:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - Run the Flask app:
+     ```bash
+     python app.py
+     ```
+
+## Running the App
+
+1. Connect a device or start an emulator/simulator.
+2. Run the app:
+   ```bash
+   flutter run
+   ```
+
+## Additional Notes
+
+- Ensure you have set the correct API keys for OpenWeatherMap in the respective Dart files.
+- The Flask backend must be running locally for the image prediction functionality to work correctly.
+- You may need to configure platform-specific settings for Android and iOS. Refer to the [Flutter documentation](https://flutter.dev/docs) for detailed instructions.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
